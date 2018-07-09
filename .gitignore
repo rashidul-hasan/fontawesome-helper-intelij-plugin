@@ -1,0 +1,5 @@
+.idea/
+out
+test-plugin.iml
+test-plugin.jar
+gson-2.2.2.jar
