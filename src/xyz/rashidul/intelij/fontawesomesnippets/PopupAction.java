@@ -18,6 +18,8 @@ import xyz.rashidul.intelij.fontawesomesnippets.fa.Regular;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.*;
@@ -56,27 +58,41 @@ public class PopupAction extends BaseAction{
 
         JBList jl = new JBList(listModel);
         jl.setSelectionBackground(new Color(0,0,150));
-        jl.addMouseListener(new MouseAdapter() {
+        jl.addKeyListener(new KeyListener() {
             @Override
-            public void mouseClicked(MouseEvent e) {
-                FontIcon fontIcon = (FontIcon) jl.getModel().getElementAt(jl.locationToIndex(e.getPoint()));
-                // ediotr
-                //Get required data keys
-                final Project project = anActionEvent.getProject();
-                final Editor editor = anActionEvent.getData(CommonDataKeys.EDITOR);
-                //Set visibility only in case of existing project and editor
-                anActionEvent.getPresentation().setVisible(project != null && editor != null);
+            public void keyTyped(KeyEvent e) {
 
-                assert editor != null;
-                final int cursorOffset = editor.getCaretModel().getOffset();
-                final Document document = editor.getDocument();
+            }
 
-                new WriteCommandAction(project){
-                    @Override
-                    protected void run(@NotNull Result result) throws Throwable {
-                        document.insertString(cursorOffset, "kuttar baccha");
-                    }
-                }.execute();
+            @Override
+            public void keyPressed(KeyEvent e) {
+                int key = e.getKeyCode();
+                if (key == KeyEvent.VK_ENTER) {
+                    FontIcon fontIcon = (FontIcon) jl.getSelectedValue();
+
+                    String snippet = String.format("<i class=\"fa fa-%s\"></i>", fontIcon.getName());
+                    // ediotr
+                    //Get required data keys
+                    final Project project = anActionEvent.getProject();
+                    final Editor editor = anActionEvent.getData(CommonDataKeys.EDITOR);
+                    //Set visibility only in case of existing project and editor
+                    anActionEvent.getPresentation().setVisible(project != null && editor != null);
+
+                    assert editor != null;
+                    final int cursorOffset = editor.getCaretModel().getOffset();
+                    final Document document = editor.getDocument();
+
+                    new WriteCommandAction(project){
+                        @Override
+                        protected void run(@NotNull Result result) throws Throwable {
+                            document.insertString(cursorOffset, snippet);
+                        }
+                    }.execute();
+                }
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
 
             }
         });

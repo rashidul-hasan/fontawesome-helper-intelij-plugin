@@ -32,7 +32,7 @@
 
         <add-to-group group-id="ToolsMenu" relative-to-action="GenerateJavadoc" anchor="after"/>
 
-        <!--<keyboard-shortcut first-keystroke="control alt G" second-keystroke="C" keymap="$default"/>-->
+        <keyboard-shortcut first-keystroke="control Q" keymap="$default"/>
 
         <!--<mouse-shortcut keystroke="control button3 doubleClick" keymap="$default"/>-->
       </action>
