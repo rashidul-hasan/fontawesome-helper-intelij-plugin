@@ -1,17 +1,10 @@
-package xyz.rashidul.testplugin;
+package xyz.rashidul.intelij.fontawesomesnippets;
 
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.gson.Gson;
 import com.intellij.openapi.components.ApplicationComponent;
 import org.jetbrains.annotations.NotNull;
-import xyz.rashidul.testplugin.fa.FontAwesomeUnicode;
-import xyz.rashidul.testplugin.fa.Solid;
 
-import java.io.*;
-import java.util.List;
-
-public class TestPluginInitiator implements ApplicationComponent {
+public class PluginInitiator implements ApplicationComponent {
 
     @Override
     public void initComponent() {

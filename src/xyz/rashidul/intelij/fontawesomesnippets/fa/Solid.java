@@ -1,5 +1,4 @@
-
-package xyz.rashidul.testplugin.fa;
+package xyz.rashidul.intelij.fontawesomesnippets.fa;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -15,7 +14,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
     "name",
     "unicode"
 })
-public class Brand {
+public class Solid {
 
     @JsonProperty("name")
     private String name;

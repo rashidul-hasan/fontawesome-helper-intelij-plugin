@@ -1,5 +1,4 @@
-
-package xyz.rashidul.testplugin.fa;
+package xyz.rashidul.intelij.fontawesomesnippets.fa;
 
 import java.util.HashMap;
 import java.util.Map;

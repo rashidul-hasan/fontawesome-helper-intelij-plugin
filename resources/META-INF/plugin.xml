@@ -1,33 +1,24 @@
 <idea-plugin version="2">
-  <id>com.your.company.unique.plugin.id</id>
-  <name>Rashed's plugin</name>
+  <id>xyz.rashidul.intelij.fasnippets</id>
+  <name>Font Awesome Snippets</name>
   <version>1.0</version>
-  <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+  <vendor email="rashidul69@gmail.com" url="http://www.rashidul.xyz">Rashidul Hasan</vendor>
 
   <description><![CDATA[
-      Enter short description for your plugin here.<br>
-      <em>most HTML tags may be used</em>
+      An Intelij IDEA plugin to quickly insert font awesome snippets
     ]]></description>
 
   <change-notes><![CDATA[
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>
+
     ]]>
   </change-notes>
 
   <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
   <idea-version since-build="145.0"/>
 
-  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
-       on how to target different products -->
-  <!-- uncomment to enable plugin in all products
-  <depends>com.intellij.modules.lang</depends>
-  -->
-
   <application-components>
-    <!-- Add your project components here -->
     <component>
-      <implementation-class>xyz.rashidul.testplugin.TestPluginInitiator</implementation-class>
+      <implementation-class>xyz.rashidul.intelij.fontawesomesnippets.PluginInitiator</implementation-class>
     </component>
   </application-components>
 
@@ -37,13 +28,13 @@
 
   <actions>
 
-      <action id="VssIntegration.GarbageCollection" class="xyz.rashidul.testplugin.MyAction" text="Collect _Garbage" description="Run garbage collector">
+      <action id="VssIntegration.GarbageCollection" class="xyz.rashidul.intelij.fontawesomesnippets.PopupAction" text="Font Awesome Snippets" description="Font Awesome Snippets">
 
         <add-to-group group-id="ToolsMenu" relative-to-action="GenerateJavadoc" anchor="after"/>
 
-        <keyboard-shortcut first-keystroke="control alt G" second-keystroke="C" keymap="$default"/>
+        <!--<keyboard-shortcut first-keystroke="control alt G" second-keystroke="C" keymap="$default"/>-->
 
-        <mouse-shortcut keystroke="control button3 doubleClick" keymap="$default"/>
+        <!--<mouse-shortcut keystroke="control button3 doubleClick" keymap="$default"/>-->
       </action>
 
 

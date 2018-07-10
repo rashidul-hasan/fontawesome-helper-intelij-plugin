@@ -1,13 +1,11 @@
-package xyz.rashidul.testplugin;
-
+package xyz.rashidul.intelij.fontawesomesnippets;
 
 import com.intellij.openapi.project.DumbAwareAction;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-
 import javax.swing.*;
 
-public abstract class BaseAction extends DumbAwareAction{
+public abstract class BaseAction extends DumbAwareAction {
 
     public BaseAction(@Nullable String text, @Nullable String description, @Nullable Icon icon) {
         super(text, description, icon);

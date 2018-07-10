@@ -1,4 +1,4 @@
-package xyz.rashidul.testplugin;
+package xyz.rashidul.intelij.fontawesomesnippets;
 
 
 public class FontIcon {
