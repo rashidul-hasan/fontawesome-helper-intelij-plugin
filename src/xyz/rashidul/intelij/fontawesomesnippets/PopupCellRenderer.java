@@ -18,7 +18,7 @@ class PopupCellRenderer extends DefaultListCellRenderer {
                                                   boolean cellHasFocus) {
 
         FontIcon fontIcon = (FontIcon) value;
-        JPanel jPanel = new JPanel();
+        JPanel jPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
 
         JLabel c = new JLabel(fontIcon.getCode());
         c.setFont(font);
