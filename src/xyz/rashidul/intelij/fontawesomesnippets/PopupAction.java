@@ -57,7 +57,6 @@ public class PopupAction extends BaseAction{
         DefaultListModel<FontIcon> listModel = getList();
 
         JBList jl = new JBList(listModel);
-        jl.setSelectionBackground(new Color(0,0,150));
         jl.addKeyListener(new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {

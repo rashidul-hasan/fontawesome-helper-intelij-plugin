@@ -27,7 +27,9 @@ class PopupCellRenderer extends DefaultListCellRenderer {
         jPanel.add(text);
 
         if (isSelected) {
-            jPanel.setBackground(Color.BLUE);
+            jPanel.setBackground(new Color(56,117,214));
+            c.setForeground(Color.WHITE);
+            text.setForeground(Color.WHITE);
         }
         return jPanel;
     }
